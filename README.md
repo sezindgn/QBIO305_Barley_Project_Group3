@@ -2,5 +2,5 @@
 
 Barley Project(QBIO305 Population and Quantitative Genetics)- Group 3 : Paula Esther Winnitzki,Sara Kreci,Sezin Dogan,Yannis 
 
-Templates of the R scripts were imported from the exercises slot during the course
+Templates of the R scripts were imported from the course exercises
 
