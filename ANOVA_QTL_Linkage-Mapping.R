@@ -20,7 +20,7 @@ resid.raw <- model.raw$residuals
 resid.raw
 
 # plot the histogram
-histogram_raw_data = ggplot(data = data.frame(1:length(resid.raw), resid.raw), 
+ggplot(data = data.frame(1:length(resid.raw), resid.raw), 
        aes(x = resid.raw)) +
   geom_histogram(aes(y =..density..), color="darkgrey", bins=50) +
   stat_function(fun = dnorm, 
@@ -44,7 +44,7 @@ model.clean <- aov(Height ~ Genotype, data = dta.clean)
 resid.clean <- model.clean$residuals
 
 # check normality and homoscedasticity again
-histogram_clean_data = ggplot(data = data.frame(1:length(resid.clean), resid.clean), 
+ggplot(data = data.frame(1:length(resid.clean), resid.clean), 
        aes(x = resid.clean)) +
   geom_histogram(aes(y =..density..), color="darkgrey", bins=50) +
   stat_function(fun = dnorm, 
@@ -61,29 +61,11 @@ plot(model.clean, which = 1)
 summary(model.raw)
 summary(model.clean)
 
-# we'll use the 'plot_grid' function from the cowplot package to put all histograms and qq- plots,respectively in a figure
-plot_grid(histogram_raw_data, histogram_clean_data, labels = c('Histogram:Raw Data', 'Histogram:Clean Data'), label_size = 12,nrow = 2) # to plot two histograms in a figure 
-
-##plot(qqplot_raw, qqplot_clean, labels = c('QQ-Plot:Raw Data', 'QQ-Plot:Clean Data'), label_size = 12,nrow = 2) # to plot 2 qq-plots in a figure
-
 # Create QQ plot for clean residuals
 qqplot_clean <- qqPlot(resid.clean, envelope = FALSE, main = "QQ Plot: Clean Residuals")
 
 # Create QQ plot for raw residuals
 qqplot_raw <- qqPlot(resid.raw, envelope = FALSE, main = "QQ Plot: Raw Residuals")
-
-# Set up a 1x2 layout for two plots in one row
-par(mfrow = c(1, 2))
-qqPlot(resid.raw, envelope = F)
-qqPlot(resid.clean, envelope = F)
-# Reset the graphical parameters to the default
-par(mfrow = c(1, 1))
-
-##plot_grid(plot_raw, plot_clean, labels = c('Raw Data', 'Clean Data'), label_size = 12,nrow = 2) # to plot raw and clean data 
-par(mfrow = c(1, 2))
-plot(model.raw, which = 1,main = "Raw Data")
-plot(model.clean, which = 1,main = "Clean Data")
-par(mfrow = c(1, 1))
 
 # QTL 
 
