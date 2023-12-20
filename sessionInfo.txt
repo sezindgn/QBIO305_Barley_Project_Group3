@@ -1,3 +1,4 @@
+sessionInfo()  (in R )
 R version 4.3.2 (2023-10-31 ucrt)
 Platform: x86_64-w64-mingw32/x64 (64-bit)
 Running under: Windows 11 x64 (build 22621)
@@ -14,14 +15,16 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] qtl_1.66      qqman_0.1.9   cowplot_1.1.2 car_3.1-2     carData_3.0-5 ggplot2_3.4.4
+[1] qtl_1.66      qqman_0.1.9   lmtest_0.9-40 zoo_1.8-12    cowplot_1.1.2 car_3.1-2 carData_3.0-5 ggplot2_3.4.4
+
 
 loaded via a namespace (and not attached):
- [1] crayon_1.5.2      vctrs_0.6.5       cli_3.6.2         rlang_1.1.2      
- [5] generics_0.1.3    calibrate_1.7.7   glue_1.6.2        labeling_0.4.3   
- [9] colorspace_2.1-0  scales_1.3.0      fansi_1.0.6       grid_4.3.2       
-[13] munsell_0.5.0     tibble_3.2.1      abind_1.4-5       MASS_7.3-60      
-[17] lifecycle_1.0.4   compiler_4.3.2    dplyr_1.1.4       pkgconfig_2.0.3  
-[21] rstudioapi_0.15.0 farver_2.1.1      R6_2.5.1          tidyselect_1.2.0 
-[25] utf8_1.2.4        parallel_4.3.2    pillar_1.9.0      magrittr_2.0.3   
-[29] tools_4.3.2       withr_2.5.2       gtable_0.3.4     
+ [1] crayon_1.5.2      vctrs_0.6.5       cli_3.6.2         rlang_1.1.2
+ [5] generics_0.1.3    calibrate_1.7.7   labeling_0.4.3    glue_1.6.2
+ [9] colorspace_2.1-0  scales_1.3.0      fansi_1.0.6       grid_4.3.2
+[13] munsell_0.5.0     tibble_3.2.1      abind_1.4-5       MASS_7.3-60
+[17] lifecycle_1.0.4   compiler_4.3.2    dplyr_1.1.4       pkgconfig_2.0.3
+[21] rstudioapi_0.15.0 farver_2.1.1      lattice_0.21-9    R6_2.5.1
+[25] tidyselect_1.2.0  utf8_1.2.4        parallel_4.3.2    pillar_1.9.0
+[29] magrittr_2.0.3    tools_4.3.2       withr_2.5.2       gtable_0.3.4
+
