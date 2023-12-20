@@ -1,0 +1,13 @@
+> bptest(model.clean)
+
+	studentized Breusch-Pagan test
+
+data:  model.clean
+BP = 81.548, df = 50, p-value = 0.003201
+
+> shapiro.test(resid.clean)
+
+	Shapiro-Wilk normality test
+
+data:  resid.clean
+W = 0.86892, p-value = 0.00000000000007823
