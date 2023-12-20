@@ -1,0 +1,11 @@
+> #Show the best linkage to a marker from each chromosome
+> summary(awn_length)
+                             chr    pos     lod length
+pter-bPb-6318 (*-1)           1H  -5.00 0.39351    269
+pter-FGX_OWB00196 (*-1)       2H  -3.74 0.24979    324
+3_0342-[221563] (6-7)         3H 164.45 1.86842    322
+3_0825-qter (6-*)             4H 131.76 0.00483    368
+FGX_OWB00498-[222906] (5-6)   5H 184.81 0.90878    434
+1_1261-DsT-74 (3-4)           6H 116.75 0.33607   1231
+2_0685-Ris44 (5-6)            7H 125.06 3.35027    307
+naked_seed-seed_colour (4-6)  un  80.00 2.65740    487
