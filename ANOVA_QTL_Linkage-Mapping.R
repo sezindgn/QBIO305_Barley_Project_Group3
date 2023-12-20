@@ -5,7 +5,7 @@ library(ggplot2)    # load the ggplot2 library for plotting
 library(car)        # load the car  library to make a QQplot
 library(cowplot)    # allows us to combine multiple plots in one figure
 options(scipen=999) # remove scientific notation of very low integers
-
+library(lmtest)
 # load the data
 dta.raw <- read.csv("dta---ANOVA_QTLanalysis.csv")
 
@@ -53,7 +53,8 @@ ggplot(data = data.frame(1:length(resid.clean), resid.clean),
                 color="darkred")
 # plot qq-plot
 qqplot_clean = qqPlot(resid.clean, envelope = F)
-
+bptest(model.clean)
+shapiro.test(resid.clean)
 # check for homoscedasticity and outliers 
 plot(model.clean, which = 1)
 
